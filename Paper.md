@@ -1,27 +1,3 @@
----
-date: "2019-04-24T00:00:00Z"
-external_link: ""
-image:
-  caption: Shaniwarwada Gate
-  focal_point: Smart
-links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/aseemvd
-summary: Understanding the Social and Infrastructural Factors Relating to Spatial Inequality
-tags:
-- Spatial Analysis
-- Transit and Transportation
-- Academic
-- Graduate Work
-title: Manifestation of Spatial Inequality in Pune
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
----
-
 ## Introduction
 
 According to the latest census data available globally, more than half the world’s population lives in urban areas. This, of course, is influenced by how governments define ‘urban area’ to be, as each nation uses its own criteria of density, employment, land-use, etc. However, one can agree that the proportion of dense, urban settlements is increasing. (Satterthwaite 2002)
@@ -94,11 +70,11 @@ A large part of the character of a citizenry can be understood by looking at soc
 
 Scheduled Castes and Scheduled Tribes are classifications made for administrative purposes, they group underprivileged communities for a wide variety of affirmative action programs and HDI improvement schemes. These groups are generally considered minorities and are such in Pune. It would be interesting to see how their proportions are manifested by census-wards in Pune.
 
-![ ](/img/project/asa/sumstats_tbl_scst_prop.jpg "Summary Statistics of Census Wards by Their Proportion of SC&ST Residents")
+![ ](/paper_images/sumstats_tbl_scst_prop.jpg "Summary Statistics of Census Wards by Their Proportion of SC&ST Residents")
 
 We proceed to classify a ward as either majority dominant, or minority dominant. Here, we see that the median value of SC&ST proportion in a census-ward is 12.618%, and the Interquartile range is 12.259%. We take their total (24.877%) as a dividing line between majority dominant wards, (SC&ST proportion less than 24.877%) or minority dominant wards (SC&ST proportion more than 24.877%).
 
-![ ](/img/project/asa/scst_prop.jpg "We see a ‘patchwork’ nature of social segregation, with pockets of minority-dominant areas, surrounded by majority-dominant areas.")
+![ ](/paper_images/scst_prop.jpg "We see a ‘patchwork’ nature of social segregation, with pockets of minority-dominant areas, surrounded by majority-dominant areas.")
 
 ### Literacy Rate:
 
@@ -106,13 +82,13 @@ Although universal access to education is guaranteed in the Indian Constitution,
 
 Here, we see a visible correlation between literacy rate and the proportion of SC&ST residents of a ward. The literacy rate also affects what kind of employment a person can get in their life, thus compounding problems related to employability, and skill development. The Primary Census Abstract also provides information on whether a person is employed full-time, or is marginally employed.
 
-![ ](/img/project/asa/literacy.jpg "Comparing Literacy Rates with Demographics")
+![ ](/paper_images/literacy.jpg "Comparing Literacy Rates with Demographics")
 
 ### Marginal Employment:
 
 A person with marginal employment has fewer chances of economic security, and social stability. Marginal workers are those employed for less than 6 months of the year. This results in a lower and less regular source of income. This could be 'part-time work', contractual daily-wage or intermittent manual labor. According to data from 2009, 87.8% of the SC&ST marginal worker population nationwide falls in the ‘Poor & Vulnerable’ category, whereas this count is only 54% for non-SC&ST. (Harriss-White and Prakash 2010) This shows that marginal work has a caste factor. We can also see how this correlates with the literacy rate in the above graph.
 
-![ ](/img/project/asa/marg_work.jpg "Majority Dominant areas tend to have a smaller proportion of workers classified as 'Marginal Workers' as opposed to Minority Dominant areas")
+![ ](/paper_images/marg_work.jpg "Majority Dominant areas tend to have a smaller proportion of workers classified as 'Marginal Workers' as opposed to Minority Dominant areas")
 
 With a difference in means t-test, we see that minority-dominant census-wards tend to have a larger proportion of workers employed in marginal work as compared to majority-dominant wards.
 With a p-value of 0.024, we see that the difference in means is statistically significant. 
@@ -127,7 +103,7 @@ Funding for municipal investment in public infrastructure comes from municipal w
 
 We used the OSMnx package in Python to get details of the street network in each census-ward. The pattern of development closely follows the general population density. When we compare by the proportion of SC&ST residents, we do not see any visible correlation.
 
-![ ](/img/project/asa/pop_dens.jpg "We measure population density in two ways: First by area, and secondly by length of road")
+![ ](/paper_images/pop_dens.jpg "We measure population density in two ways: First by area, and secondly by length of road")
 
 Data in the above maps are classified by 5 quantiles. We see that the street length density and population density is comparable, with a few differences. Thus, we can say that three kinds of instances occur when comparing these two maps:
 
@@ -145,7 +121,7 @@ Data in the above maps are classified by 5 quantiles. We see that the street len
  
 When we visualize this by comparing the normalized ratios of the two values, we get the following: 
 
-![ ](/img/project/asa/dens_rat.jpg "We get the density ratios between population density per area, and population density per km length of street, by normalizing their means")
+![ ](/paper_images/dens_rat.jpg "We get the density ratios between population density per area, and population density per km length of street, by normalizing their means")
 
 **1.	Equally Comparable: (ratio = 0, grey)**
 
@@ -185,11 +161,11 @@ The PMPML data includes information on the following key points:
 
 To understand these two values, we considered joining the PMPML dataset with the Census-Ward dataset. As such, we got two interesting values – Stops count per ward and the median count of bus lines passing through a bus stop in a given ward.
 
-![ ](/img/project/asa/pmpml_summstats.png "Summary Statistics on the PMPML Infrastructure by Ward")
+![ ](/paper_images/pmpml_summstats.png "Summary Statistics on the PMPML Infrastructure by Ward")
 
 When we compared the density of a census-ward with the median number of bus lines passing through its bus stands, we get the following result:
 
-![ ](/img/project/asa/transit_x_density.png "Population Density of a Ward with the number of available bus lines")
+![ ](/paper_images/transit_x_density.png "Population Density of a Ward with the number of available bus lines")
 
 We see that most census-wards have a population density of fewer than 25,000 residents per square kilometer. They also seem to have less than 10 lines per stop. The census-ward with the highest density recorded also seems to have a lower median line count per stop at around 10. The ward with the highest median line count per stop seems to have a low to moderate density. This may be due to the reason that the ward (Satavwadi) is the location of Hadapsar Gadital – a bus terminal and depot. As such, it is not deviating from what one would expect. 
 
@@ -207,7 +183,7 @@ As discussed, we would like to see how bus stops are placed with regard to an ar
 
 Even though the PMPML’s service area goes beyond the Pune Municipal Corporation (PMC) area limits, we are showing only the area under the PMC as this is the scope of our study.
 
-![ ](/img/project/asa/busnetwork_bylanddensity.png "Bus Network laid on (left: Population Density per sqkm) and (right: Proportion of SC&ST Population)")
+![ ](/paper_images/busnetwork_bylanddensity.png "Bus Network laid on (left: Population Density per sqkm) and (right: Proportion of SC&ST Population)")
 
 Stops in the central parts tend to have the most lines served. We also see key routes heavily serviced, with ‘frayed’ ends marked with smaller circles. This is indicative that many lines are similar for most of the journey, and only the last and first few stops are different. This is a very common and predictable pattern for a radial city.
 
@@ -247,11 +223,11 @@ Ideally, a denser area of the city would see a larger concentration of services 
 
 A larger number of bus stops in an area gives a larger spread of areas a user/commuter can travel without needing to change lines/vehicles. This gives better access to larger parts of the city.
 
-![ ](/img/project/asa/ols_reg.jpg "OLS Regression Results")
+![ ](/paper_images/ols_reg.jpg "OLS Regression Results")
 
 The p-value for stop count, street length per person, and proportion of literate persons is very low. This indicates that they are influential variables in determining a census-ward’s proportion of SC&ST residents. Initially, it may be surprising that population density is not an influential variable. One must remember that the core dense areas of the city have a significantly low proportion of SC&ST residents. As this regression is based only on data from Pune, we cannot with conviction apply it to other cities with a different socio-spatial structure.
 
-![ ](/img/project/asa/correlation.png "Correlation Matrix")
+![ ](/paper_images/correlation.png "Correlation Matrix")
 
 
 The R-squared value of 0.454 is indicative that these factors explain 45.5% of the variance seen in the proportion of SC&ST residents in Pune.
